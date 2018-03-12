@@ -5,8 +5,9 @@
       {
          "type": "Feature",
          "properties": {
-            "updateDate": "",
-            "updateTime": "",
+            "date": "",
+            "time": "",
+            "unixtime": "",
             "tilePath": ""
          },
          "geometry": {
