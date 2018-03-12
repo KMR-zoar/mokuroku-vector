@@ -1,0 +1,18 @@
+{
+   "type": "FeatureCollection",
+   "generator": "mokuroku-vector",
+   "features": [
+      {
+         "type": "Feature",
+         "properties": {
+            "updateDate": "",
+            "updateTime": "",
+            "tilePath": ""
+         },
+         "geometry": {
+            "type": "Polygon",
+            "coordinates": []
+         }
+      }
+   ]
+}
