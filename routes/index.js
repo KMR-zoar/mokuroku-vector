@@ -8,6 +8,7 @@ const sqlite3 = require('sqlite3');
 const db = new sqlite3.Database('./mokuroku.sqlite');
 
 const moment = require('moment');
+const url = require('url');
 
 createGeoJSON = (date, time, unixtime, path, coordinates) => {
    let result = require('../template.json');
@@ -21,7 +22,12 @@ createGeoJSON = (date, time, unixtime, path, coordinates) => {
 }
 
 router.get('/', function(req, res, next) {
-   res.render('index', { title: 'Express' });
+   var accessUrl = req.protocol + "://" +
+      req.get('host') + req.originalUrl;
+   res.render('index', {
+      title: 'Mokuroku-Vector',
+      url: accessUrl
+   });
 });
 
 router.get('/:z/:x/:y.json', (req, res, next) => {
